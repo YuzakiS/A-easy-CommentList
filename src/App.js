@@ -44,10 +44,10 @@ function App() {
         <h1>Comment List</h1>
         <ul className="nav">
           <li>
-            <a id="date" className="targetOff" href="#" onClick={Datesorted}>The newest comment</a>
+            <span id="date" className="targetOff" href="#" onClick={Datesorted}>The newest comment</span>
           </li>
           <li>
-            <a id="like" className="targetOff" href="#" onClick={Favouritesorted}>The favourite comment</a>
+            <span id="like" className="targetOff" href="#" onClick={Favouritesorted}>The favourite comment</span>
           </li>
         </ul>
       </div>
@@ -59,7 +59,7 @@ function App() {
         {commentList.map((item) => <div key={item.id}>
           {item.name}
           <p className="content">{item.content}</p>
-          <p>{item.date} , {item.like} <a href="#" onClick={() => DeleteComment(item.id)}>Delete</a></p>
+          <p>{item.date} , {item.like} <span href="#" onClick={() => DeleteComment(item.id)}>Delete</span></p>
         </div>)}
       </div>
     </div>
